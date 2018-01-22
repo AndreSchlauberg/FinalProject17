@@ -115,10 +115,11 @@ def part7():
         print("The hoodlems pull knives out and threaten to come at you.")
         answer = input("Do you continue to approach the gangstas and risk your life? ").lower()
         if answer == "yes":
-            print("You pull out " + player_inventory[3] + " and find that the deli workers forgot their butcher knife in your sandwich.")
+            print("You pull out a ham sandwich and find that the deli workers forgot their butcher knife in your sandwich.")
             print("You throw the knife at the bigger of the 2 attackers and it strikes him in the leg.")
             print("Congratulations, you've mortally wounded a stranger. The two men limp and run away in fear of what else you might have.")
-            player_inventory.remove('ham sandwich')
+            if 'key' in player_inventory:
+                del player_inventory['ham sandwich']
             part9()
         elif answer == "no":
             print("You run away and leave the bois to die. You hear the bois screaming eachothers' names in agony while being beaten.")
