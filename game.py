@@ -35,7 +35,7 @@ def part12():
     print("You come across some of the devil's lettuce and rum. Your friends are good libertarians and want nothing to do with it.")
     answer = input("Do you partake of the devil's lettuce and bring the rum too? ").lower()
     if answer == "yes":
-        print("You do not know da way of the Libertarians. You are ejected from the community and left for dead.")
+        print("You do not know da way of the Libertarians. Everyone thinks you are an alcoholic and are trying to drown your sorrows. You are rejected from the community and left for dead. THIS IS WINFIELD!")
         part1()
     elif answer == "no":
         print("You passed the test and are permitted to continue living in the community.")
@@ -46,7 +46,7 @@ def part12():
 
 def part11():
     print("Your party travels back to the General Store to play a game of Yu-gi-oh and eat.")
-    print("Before playing your Pan asks you which deck you would like to play as.")
+    print("Before playing, Pan asks you which deck you would like to play as.")
     answer = input("Do you choose zombies, harpies, or jinzo? ").lower()
     if answer == "zombies":
         print("You activated his trap card and he summoned Blue Eyes White Dragon.")
@@ -77,12 +77,12 @@ def part10():
 
 def part9():
     print("After nearly losing your life you continue on through the strange town to explore its other oddities.")
-    print("Along your journey you encounter 2 boys by the names of Pan Darrillo and Waise Blilson. You befriend the 2 and the accompany you on your journey through WInfield.")
-    print("The 3 of you go back to the bbal courts and join the other teens in a quick game.")
+    print("Along your journey you encounter 2 boys by the names of Pan Darrillo and Waise Blilson. You befriend the 2 and they accompany you on your journey through WInfield.")
+    print("The 3 of you go back to the bball courts and join the other teens in a quick game.")
     print("While splitting into teams you find a swivel chair that is crumbling apart.")
     answer = input("Do you continue playing bball with the bois? ").lower()
     if answer == "yes":
-        print("Your team loses cause you have never played bbal before in your life. Somehow you managed to break a fish tank 30 feet away.")
+        print("Your team loses cause you have never played bball before in your life. Somehow you managed to break a fish tank 30 feet away.")
         part10()
     elif answer == "no":
         print("You spin around in the swivel chair while the bois play around you. You get so dizzy and dehydrated you puke.")
@@ -93,7 +93,7 @@ def part9():
 
 def part8():
         global answer
-        print("After walking outside, you see some fellow youth playing some bbal outside the school, when a couple of guys, they were up to no good, started causing trouble in the neighborhood.")
+        print("After walking outside, you see some fellow youth playing some bball outside the school, when a couple of guys, they were up to no good, started causing trouble in the neighborhood.")
         print("You walk over to the courts and confront the thugs.")
         print("The hoodlems pull knives out and threaten to come at you.")
         answer = input("Do you continue to approach the gangstas and risk your life? ").lower()
@@ -102,7 +102,7 @@ def part8():
             print("You have died. Shouldve bought some items from the store or not tried to be a hero.")
             part1()
         elif answer == "no":
-            print("You run away and leave the bois to die. You hear the bois screaming the eachothers' names in agony while being beaten.")
+            print("You run away and leave the bois to die. You hear the bois screaming eachothers' names in agony while being beaten.")
             part9()
         else:
             print("Please enter a vaild answer")
@@ -110,18 +110,18 @@ def part8():
 
 def part7():
         global player_inventory
-        print("After walking outside, you see some fellow youth playing some bbal outside the school, when a couple of guys, they were up to no good, started causing trouble in the neighborhood.")
+        print("After walking outside, you see some fellow youth playing some bball outside the school, when a couple of guys, they were up to no good, started causing trouble in the neighborhood.")
         print("You walk over to the courts and confront the thugs.")
         print("The hoodlems pull knives out and threaten to come at you.")
         answer = input("Do you continue to approach the gangstas and risk your life? ").lower()
         if answer == "yes":
             print("You pull out " + player_inventory[3] + " and find that the deli workers forgot their butcher knife in your sandwich.")
             print("You throw the knife at the bigger of the 2 attackers and it strikes him in the leg.")
-            print("Congratulations, you've moratlly wounded a stranger. The two men limp and run away in fear of what else you might have.")
+            print("Congratulations, you've mortally wounded a stranger. The two men limp and run away in fear of what else you might have.")
             player_inventory.remove('ham sandwich')
             part9()
         elif answer == "no":
-            print("You run away and leave the bois to die. You hear the bois screaming the eachothers' names in agony while being beaten.")
+            print("You run away and leave the bois to die. You hear the bois screaming eachothers' names in agony while being beaten.")
             part9()
         else:
             print("Please enter a vaild answer")
@@ -130,17 +130,17 @@ def part7():
 def part6():
         global player_inventory
         print("You begin walking into Winfield and find that it is rather small. The center of attention for its residents is the General Store.")
-        print("You make your way to the store and see that the workers are very lazy and unwilling to work. You spot the stores owner and decide to talk to her.")
+        print("You make your way to the store and see that the workers are very lazy and unwilling to work. You spot the store's owner and decide to talk to her.")
         print('You ask her "What is this place and why does everyone in town come here?"')
         print('She replies, "The store is a bakery,a deli, a general store, and a pharmacy. Here is some money. The store needs more business so please buy something."')
         answer = input("Do you take her money and buy something? ").lower()
         if answer == "yes":
             print("The owner says that her name is Sandy and that she is glad people like you are in the community.")
-            print("After your conversation with Sandy you realize she is missing a few screws but has sweat intentions for her town.")
+            print("After your conversation with Sandy you realize she is missing a few screws but has sweet intentions for her town.")
             print("You now make your way around the store looking for items that might benefit you.")
             print("You grab a bottle of Tylenol, a soda, some bleach, and have a ham sandwich made for you.")
             print("You leave the store.")
-            player_inventory = ['tylenol','soda','bleach','ham sandwich']
+            player_inventory = {'tylenol': 1,'soda': 1,'bleach': 1,'ham sandwich': 1}
             part7()
         elif answer == "no":
             print("The owner is disappointed in your choice and sees you as a detriment. You leave the store.")
@@ -201,11 +201,13 @@ def part1():
 def intro():
     print("You are entering the town of Winfield.")
     name = input("what is your name traveller: ").lower()
-    if name == "Gary Johnson":
+    if name == "gary johnson":
         print("You are Winfield's God. You win.")
-    elif name == "Ron Paul":
+        whatbedis()
+    elif name == "ron paul":
         print("You are Winfield's God. You win.")
-    elif name == "Adam Cokesh":
+        whatbedis()
+    elif name == "adam kokesh":
         print("Please enter a name that does not belong to a psychopath.")
         intro()
     else:
